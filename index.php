@@ -67,11 +67,6 @@
             <div u="slides" style="" id="slides_container">
                 <div><img u="image" src="img/photography/002.jpg" /></div>
                 <div><img u="image" src="img/photography/003.jpg" /></div>
-                <div><img u="image" src="img/photography/004.jpg" /></div>
-                <div><img u="image" src="img/photography/005.jpg" /></div>
-                <div><img u="image" src="img/photography/006.jpg" /></div>
-                <div><img u="image" src="img/photography/007.jpg" /></div>
-                <div><img u="image" src="img/photography/008.jpg" /></div>
             </div>
             
             <!--#region Arrow Navigator Skin Begin -->
