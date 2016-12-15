@@ -3,7 +3,24 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arrow Navigator Example - Jssor Slider, Carousel, Slideshow</title>
+    <title>NX Télévision - Slider</title>
+    <style type="text/css">
+        #slider1_container{
+            position: relative;
+            top: 0px;
+            left: 0px;
+            width: 600px;
+            height: 300px; 
+        }
+        #slides_container{
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 600px;
+            height: 300px;
+            overflow: hidden;
+        }
+    </style>
 </head>
 <body style="font-family:Arial, Verdana;background-color:#fff;">
     <!-- it works the same with all jquery version from 1.x to 2.x -->
@@ -28,12 +45,10 @@
     </script>
     <!-- Jssor Slider Begin -->
     <!-- To move inline styles to css file/block, please specify a class name for each element. --> 
-    <div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 600px;
-        height: 300px; ">
+    <div id="slider1_container" style="">
 
         <!-- Slides Container -->
-        <div u="slides" style="position: absolute; left: 0px; top: 0px; width: 600px; height: 300px;
-            overflow: hidden;">
+        <div u="slides" style="" id="slides_container">
             <div><img u="image" src="img/photography/002.jpg" /></div>
             <div><img u="image" src="img/photography/003.jpg" /></div>
             <div><img u="image" src="img/photography/004.jpg" /></div>
