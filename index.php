@@ -46,6 +46,13 @@
             background-color: rgba(0,0,0,0.5);
             position: absolute;
         }
+        #slides_container .caption a{
+            color : white;
+            cursor: pointer;
+        }
+        #slides_container .caption a:hover{
+            text-decoration: none;
+        }
     </style>
 </head>
 <body style="font-family:Arial, Verdana;background-color:#fff;">
@@ -82,7 +89,7 @@
                 $files = $files = scandir($folder);
                 foreach($files as $file) {
                     if($file != '.' and $file != '..')
-                        echo '<div><span class="caption">'.$file.'</span><video u="video" controls><source src="'.$folder.$file.'" type="video/mp4">Your browser does not support the video tag.</video></div>';
+                        echo '<div><span class="caption"><a href="'.$folder.$file.'">'.$file.'</span><video u="video" controls><source src="'.$folder.$file.'" type="video/mp4">Your browser does not support the video tag.</video></div>';
                 }
                 ?>
             </div>
