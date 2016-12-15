@@ -92,7 +92,7 @@ phpCAS::forceAuthentication();
     <!-- Jssor Slider Begin -->
     <!-- To move inline styles to css file/block, please specify a class name for each element. --> 
     <div id="slider_wrapper">
-        <img id="imgNX_wrapper" src="https://pbs.twimg.com/profile_images/2170732098/Fat_logo_NX_fond_noir.jpg">
+        <img id="imgNX_wrapper" src="img/Fat_logo_NX_fond_noir.jpg">
         <h1>Direct GDA</h1>
         <div id="slider1_container" style="">
             <!-- Slides Container -->
