@@ -34,6 +34,18 @@
             height: 400px; 
             overflow: hidden;
         }
+        #slides_container video{
+            width: 900px;
+            height: 400px; 
+        }
+        #slides_container .caption{
+            left: 200px;
+            width: 500px;
+            padding: 5px;
+            top: 0px;
+            background-color: rgba(0,0,0,0.5);
+            position: absolute;
+        }
     </style>
 </head>
 <body style="font-family:Arial, Verdana;background-color:#fff;">
@@ -70,11 +82,9 @@
                 $files = $files = scandir($folder);
                 foreach($files as $file) {
                     if($file != '.' and $file != '..')
-                        echo '<div><video u="video" controls><source src="'.$folder.$file.'" type="video/mp4">Your browser does not support the video tag.</video></div>';
+                        echo '<div><span class="caption">'.$file.'</span><video u="video" controls><source src="'.$folder.$file.'" type="video/mp4">Your browser does not support the video tag.</video></div>';
                 }
                 ?>
-                <div><img u="image" src="img/photography/002.jpg" /></div>
-                <div><img u="image" src="img/photography/003.jpg" /></div>
             </div>
             
             <!--#region Arrow Navigator Skin Begin -->
