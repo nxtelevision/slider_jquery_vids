@@ -65,6 +65,14 @@
 
             <!-- Slides Container -->
             <div u="slides" style="" id="slides_container">
+                <?php
+                $folder="videos/";  
+                $files = $files = scandir($folder);
+                foreach($files as $file) {
+                    if($file != '.' and $file != '..')
+                        echo '<div><video u="video" controls><source src="'.$folder.$file.'" type="video/mp4">Your browser does not support the video tag.</video></div>';
+                }
+                ?>
                 <div><img u="image" src="img/photography/002.jpg" /></div>
                 <div><img u="image" src="img/photography/003.jpg" /></div>
             </div>
