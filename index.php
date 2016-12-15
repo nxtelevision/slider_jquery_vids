@@ -20,6 +20,11 @@
             height: 100%;
             background-color: #1D1D1D;
         }
+        #slider_wrapper h1{
+            color: white;
+            font-family: Arial;
+            margin-top: -30px;
+        }
         #slider1_container{
             position: relative;
             width: 900px;
@@ -80,8 +85,8 @@
     <!-- To move inline styles to css file/block, please specify a class name for each element. --> 
     <div id="slider_wrapper">
         <img id="imgNX_wrapper" src="https://pbs.twimg.com/profile_images/2170732098/Fat_logo_NX_fond_noir.jpg">
+        <h1>Direct GDA</h1>
         <div id="slider1_container" style="">
-
             <!-- Slides Container -->
             <div u="slides" style="" id="slides_container">
                 <?php
@@ -89,7 +94,7 @@
                 $files = $files = scandir($folder);
                 foreach($files as $file) {
                     if($file != '.' and $file != '..')
-                        echo '<div><span class="caption"><a href="'.$folder.$file.'">'.$file.'</span><video u="video" controls><source src="'.$folder.$file.'" type="video/mp4">Your browser does not support the video tag.</video></div>';
+                        echo '<div><span class="caption"><a href="'.$folder.$file.'">'.$file.'</a></span><video u="video" controls><source src="'.$folder.$file.'" type="video/mp4">Your browser does not support the video tag.</video></div>';
                 }
                 ?>
             </div>
