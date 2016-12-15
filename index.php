@@ -1,4 +1,12 @@
-﻿<!DOCTYPE html>
+﻿<?php
+session_start() ;
+require_once('CAS/CAS.php');
+phpCAS::client(CAS_VERSION_2_0,'cas.my.ecp.fr',443,'');
+phpCAS::setLang(PHPCAS_LANG_FRENCH);
+phpCAS::setNoCasServerValidation();
+phpCAS::forceAuthentication();
+?>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
