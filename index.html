@@ -5,19 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NX Télévision - Slider</title>
     <style type="text/css">
+        html,body{
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        #imgNX_wrapper{
+            display: inline-block;
+            margin-top: -50px;
+            margin-bottom: -50px;
+        }
+        #slider_wrapper{
+            text-align: center;
+            height: 100%;
+            background-color: #1D1D1D;
+        }
         #slider1_container{
             position: relative;
-            top: 0px;
-            left: 0px;
-            width: 600px;
-            height: 300px; 
+            width: 900px;
+            height: 400px; 
+            display: inline-block;
         }
         #slides_container{
             position: absolute;
             left: 0px;
             top: 0px;
-            width: 600px;
-            height: 300px;
+            width: 900px;
+            height: 400px; 
             overflow: hidden;
         }
     </style>
@@ -45,61 +59,64 @@
     </script>
     <!-- Jssor Slider Begin -->
     <!-- To move inline styles to css file/block, please specify a class name for each element. --> 
-    <div id="slider1_container" style="">
+    <div id="slider_wrapper">
+        <img id="imgNX_wrapper" src="https://pbs.twimg.com/profile_images/2170732098/Fat_logo_NX_fond_noir.jpg">
+        <div id="slider1_container" style="">
 
-        <!-- Slides Container -->
-        <div u="slides" style="" id="slides_container">
-            <div><img u="image" src="img/photography/002.jpg" /></div>
-            <div><img u="image" src="img/photography/003.jpg" /></div>
-            <div><img u="image" src="img/photography/004.jpg" /></div>
-            <div><img u="image" src="img/photography/005.jpg" /></div>
-            <div><img u="image" src="img/photography/006.jpg" /></div>
-            <div><img u="image" src="img/photography/007.jpg" /></div>
-            <div><img u="image" src="img/photography/008.jpg" /></div>
+            <!-- Slides Container -->
+            <div u="slides" style="" id="slides_container">
+                <div><img u="image" src="img/photography/002.jpg" /></div>
+                <div><img u="image" src="img/photography/003.jpg" /></div>
+                <div><img u="image" src="img/photography/004.jpg" /></div>
+                <div><img u="image" src="img/photography/005.jpg" /></div>
+                <div><img u="image" src="img/photography/006.jpg" /></div>
+                <div><img u="image" src="img/photography/007.jpg" /></div>
+                <div><img u="image" src="img/photography/008.jpg" /></div>
+            </div>
+            
+            <!--#region Arrow Navigator Skin Begin -->
+            <!-- Help: http://www.jssor.com/tutorial/set-arrow-navigator.html -->
+            <style>
+                /* jssor slider arrow navigator skin 03 css */
+                /*
+                .jssora03l                  (normal)
+                .jssora03r                  (normal)
+                .jssora03l:hover            (normal mouseover)
+                .jssora03r:hover            (normal mouseover)
+                .jssora03l.jssora03ldn      (mousedown)
+                .jssora03r.jssora03rdn      (mousedown)
+                .jssora03l.jssora03lds      (disabled)
+                .jssora03r.jssora03rds      (disabled)
+                */
+                .jssora03l, .jssora03r {
+                    display: block;
+                    position: absolute;
+                    /* size of arrow element */
+                    width: 55px;
+                    height: 55px;
+                    cursor: pointer;
+                    background: url(img/a03.png) no-repeat;
+                    overflow: hidden;
+                }
+                .jssora03l { background-position: -3px -33px; }
+                .jssora03r { background-position: -63px -33px; }
+                .jssora03l:hover { background-position: -123px -33px; }
+                .jssora03r:hover { background-position: -183px -33px; }
+                .jssora03l.jssora03ldn { background-position: -243px -33px; }
+                .jssora03r.jssora03rdn { background-position: -303px -33px; }
+
+                .jssora03l.jssora03lds { background-position: -3px -33px; opacity: .3; pointer-events: none; }
+                .jssora03r.jssora03rds { background-position: -63px -33px; opacity: .3; pointer-events: none; }
+            </style>
+            <!-- Arrow Left -->
+            <span u="arrowleft" class="jssora03l" style="top: 173px; left: 8px;">
+            </span>
+            <!-- Arrow Right -->
+            <span u="arrowright" class="jssora03r" style="top: 173px; right: 8px;">
+            </span>
+            <!--#endregion Arrow Navigator Skin End -->
+            <a style="display: none" href="http://www.jssor.com">jQuery Slider</a>
         </div>
-        
-        <!--#region Arrow Navigator Skin Begin -->
-        <!-- Help: http://www.jssor.com/tutorial/set-arrow-navigator.html -->
-        <style>
-            /* jssor slider arrow navigator skin 03 css */
-            /*
-            .jssora03l                  (normal)
-            .jssora03r                  (normal)
-            .jssora03l:hover            (normal mouseover)
-            .jssora03r:hover            (normal mouseover)
-            .jssora03l.jssora03ldn      (mousedown)
-            .jssora03r.jssora03rdn      (mousedown)
-            .jssora03l.jssora03lds      (disabled)
-            .jssora03r.jssora03rds      (disabled)
-            */
-            .jssora03l, .jssora03r {
-                display: block;
-                position: absolute;
-                /* size of arrow element */
-                width: 55px;
-                height: 55px;
-                cursor: pointer;
-                background: url(img/a03.png) no-repeat;
-                overflow: hidden;
-            }
-            .jssora03l { background-position: -3px -33px; }
-            .jssora03r { background-position: -63px -33px; }
-            .jssora03l:hover { background-position: -123px -33px; }
-            .jssora03r:hover { background-position: -183px -33px; }
-            .jssora03l.jssora03ldn { background-position: -243px -33px; }
-            .jssora03r.jssora03rdn { background-position: -303px -33px; }
-
-            .jssora03l.jssora03lds { background-position: -3px -33px; opacity: .3; pointer-events: none; }
-            .jssora03r.jssora03rds { background-position: -63px -33px; opacity: .3; pointer-events: none; }
-        </style>
-        <!-- Arrow Left -->
-        <span u="arrowleft" class="jssora03l" style="top: 123px; left: 8px;">
-        </span>
-        <!-- Arrow Right -->
-        <span u="arrowright" class="jssora03r" style="top: 123px; right: 8px;">
-        </span>
-        <!--#endregion Arrow Navigator Skin End -->
-        <a style="display: none" href="http://www.jssor.com">jQuery Slider</a>
     </div>
     <!-- Jssor Slider End -->
 </body>
